@@ -1,0 +1,8 @@
+name: products
+database: sales_db
+schema: public
+columns:
+  - name: product_id
+    type: integer
+  - name: product_name
+    type: string

@@ -1,0 +1,5 @@
+name: sales_db
+owner: analytics
+description: Sales database for ingestion
+schemas:
+  - public
