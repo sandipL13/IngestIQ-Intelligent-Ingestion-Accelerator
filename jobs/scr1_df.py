@@ -1,7 +1,14 @@
-"""Source extraction job (placeholder)."""
+from core.reader import BaseReader
 
-def main():
-    print("Extracting source 1")
+class JdbcReadJob(BaseReader):
+    def __init__(self, spark, jdbc_url, table, user, password):
+        super().__init__(spark)
+        self.opts = {
+            "url": jdbc_url,
+            "dbtable": table,
+            "user": user,
+            "password": password
+        }
 
-if __name__ == "__main__":
-    main()
+    def read(self):
+        return self.spark.read.format("jdbc").options(**self.opts).load()

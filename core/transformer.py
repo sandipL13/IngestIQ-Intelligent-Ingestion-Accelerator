@@ -1,5 +1,6 @@
-"""Abstract transformers for DataFrame transformations."""
+from abc import ABC, abstractmethod
 
-class Transformer:
+class BaseTransformer(ABC):
+    @abstractmethod
     def transform(self, df):
-        raise NotImplementedError()
+        pass

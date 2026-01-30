@@ -1,7 +1,4 @@
-"""Load DataFrame to Redshift (placeholder)."""
+from cloud.aws.redshift.loader import RedshiftLoader
 
-def main():
-    print("Loading DataFrame to Redshift")
-
-if __name__ == "__main__":
-    main()
+class RedshiftJob(RedshiftLoader):
+    pass

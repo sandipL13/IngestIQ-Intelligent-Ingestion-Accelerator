@@ -1,4 +1,6 @@
-"""Glue spark session helpers (placeholder)."""
+from awsglue.context import GlueContext
+from pyspark.context import SparkContext
 
-def get_spark_session():
-    return None
+def get_spark():
+    sc = SparkContext.getOrCreate()
+    return GlueContext(sc).spark_session

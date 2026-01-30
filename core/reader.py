@@ -1,5 +1,9 @@
-"""Abstract readers for sources."""
+from abc import ABC, abstractmethod
 
-class Reader:
+class BaseReader(ABC):
+    def __init__(self, spark):
+        self.spark = spark
+
+    @abstractmethod
     def read(self):
-        raise NotImplementedError()
+        pass

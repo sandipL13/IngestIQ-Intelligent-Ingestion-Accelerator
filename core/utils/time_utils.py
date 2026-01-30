@@ -1,7 +1,5 @@
-"""Time utilities."""
+from datetime import datetime
+from .constants import DATE_FMT
 
-import datetime
-
-
-def now_iso():
-    return datetime.datetime.utcnow().isoformat()
+def now():
+    return datetime.utcnow().strftime(DATE_FMT)

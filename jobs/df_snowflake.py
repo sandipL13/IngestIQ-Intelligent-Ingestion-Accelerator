@@ -1,7 +1,4 @@
-"""Load DataFrame to Snowflake (placeholder)."""
+from cloud.snowflake.loader import SnowflakeLoader
 
-def main():
-    print("Loading DataFrame to Snowflake")
-
-if __name__ == "__main__":
-    main()
+class SnowflakeJob(SnowflakeLoader):
+    pass

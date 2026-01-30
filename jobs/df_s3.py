@@ -1,7 +1,8 @@
-"""Load DataFrame to S3 (placeholder)."""
+from core.loader import BaseLoader
 
-def main():
-    print("Loading DataFrame to S3")
+class S3LoadJob(BaseLoader):
+    def __init__(self, path):
+        self.path = path
 
-if __name__ == "__main__":
-    main()
+    def load(self, df):
+        df.write.mode("append").parquet(self.path)

@@ -1,4 +1,2 @@
-"""S3 helper (placeholder)."""
-
-def upload_to_s3(path, bucket):
-    pass
+def write_parquet(df, path, mode="append"):
+    df.write.mode(mode).parquet(path)

@@ -1,7 +1,13 @@
-"""Simple logger wrapper (placeholder)."""
-
 import logging
 
-
-def get_logger(name: str = __name__):
-    return logging.getLogger(name)
+def get_logger(name="etl"):
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.INFO)
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter(
+            "%(asctime)s | %(levelname)s | %(message)s"
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+    return logger

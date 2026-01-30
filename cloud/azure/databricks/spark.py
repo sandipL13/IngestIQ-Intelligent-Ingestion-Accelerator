@@ -1,4 +1,4 @@
-"""Databricks spark helpers (placeholder)."""
+from pyspark.sql import SparkSession
 
 def get_spark():
-    return None
+    return SparkSession.builder.getOrCreate()

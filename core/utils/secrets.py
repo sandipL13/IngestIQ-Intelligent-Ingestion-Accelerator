@@ -1,4 +1,2 @@
-"""Secrets helper (placeholder)."""
-
-def get_secret(name: str):
-    return None
+def get_secret(secret_name):
+    raise NotImplementedError("Implemented per cloud")

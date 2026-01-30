@@ -1,5 +1,6 @@
-"""Abstract loaders for targets."""
+from abc import ABC, abstractmethod
 
-class Loader:
+class BaseLoader(ABC):
+    @abstractmethod
     def load(self, df):
-        raise NotImplementedError()
+        pass
