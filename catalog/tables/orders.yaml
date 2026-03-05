@@ -1,8 +1,0 @@
-name: orders
-database: sales_db
-schema: public
-columns:
-  - name: order_id
-    type: integer
-  - name: customer_id
-    type: integer
