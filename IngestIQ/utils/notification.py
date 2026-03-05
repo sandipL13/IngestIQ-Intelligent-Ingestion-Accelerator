@@ -6,7 +6,7 @@ import requests
 
 class NotificationManager:
     def __init__(self, config):
-        self.webhook_url = "https://hooks.slack.com/services/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"
+        self.webhook_url = ""
     
     def send_success(self, database_name):
         """Send success notification"""
