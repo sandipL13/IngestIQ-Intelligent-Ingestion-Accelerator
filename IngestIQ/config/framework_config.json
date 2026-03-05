@@ -1,0 +1,45 @@
+{
+  "cloud_providers": {
+    "aws": {
+      "region": "ap-south-1",
+      "secrets_manager": true,
+      "s3_bucket": "default-bucket",
+      "dynamodb_tables": {
+        "run_time": "TABLE_RUN_TIME_METADATA",
+        "load_type": "TABLE_LOAD_TYPE"
+      }
+    },
+    "azure": {
+      "region": "eastus",
+      "key_vault": true,
+      "storage_account": "default-storage",
+      "cosmos_db": "metadata-db"
+    },
+    "gcp": {
+      "region": "us-central1",
+      "secret_manager": true,
+      "gcs_bucket": "default-bucket",
+      "firestore": "metadata-db"
+    }
+  },
+  "supported_sources": [
+    "mysql",
+    "postgresql", 
+    "oracle",
+    "sqlserver",
+    "mongodb"
+  ],
+  "supported_targets": [
+    "s3",
+    "snowflake",
+    "redshift",
+    "bigquery",
+    "synapse"
+  ],
+  "default_settings": {
+    "thread_count": 4,
+    "partition_size": 10,
+    "max_records_per_file": 1000000,
+    "compression": "snappy"
+  }
+}
